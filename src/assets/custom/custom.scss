@@ -1,0 +1,542 @@
+.center_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+// Hides some divs to demo.
+.cat__top-bar__item:first-child {
+  display: none;
+}
+
+// General Styles colors.
+
+.cat__theme--blue .cat__top-bar {
+  background-color: #f8fcfe;
+}
+
+body.cat__theme--blue .cat__menu-left {
+  background: #002c51;
+}
+
+.cat__top-bar__left {
+  display: block;
+  width: calc(100% - 83px);
+  text-align: center;
+}
+
+.cat__top-bar__logo {
+  padding: 1rem 0 1rem 84px;
+  margin: 0 auto;
+}
+
+// Tables.
+.ngx-datatable.material {
+  background: #FFF;
+  box-shadow: none;
+}
+
+.ngx-datatable .datatable-body .datatable-row-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+  &:nth-child(2n) {
+    background: #f8fcfe;
+  }
+}
+
+.cat__menu-left__item > a {
+  padding: 17px 20px;
+}
+
+.cat__menu-left__icon {
+  font-weight: 100;
+  font-size: 1.3em;
+}
+
+body.cat__theme--blue .cat__menu-left__submenu > .cat__menu-left__list {
+  padding-left: 15px;
+}
+
+
+
+/*
+body.filter-right--visible cat-page section.card  {
+width: calc(100% - 330px);
+transition: -webkit-transform .2s ease-in-out;
+transition: transform .2s ease-in-out;
+}*/
+
+.cat__menu-right-filter {
+  top: 64px;
+  background: #12729a;
+  color: white;
+  .form-group {
+    margin-bottom: 0rem;
+  }
+}
+
+body.filter-right--visible .cat__menu-right-filter {
+  box-shadow: none;
+}
+
+.cat__menu-right__label {
+  color: #fff;
+  display: none;
+}
+
+.cat__menu-right__header {
+  color: #fff;
+}
+
+.cat__menu-right__content {
+  padding: 1.42rem 0.5rem;
+}
+
+.select2 .select2-selection--multiple {
+  opacity: 1;
+}
+
+
+.btn.btn-danger, .show > .btn.btn-danger {
+  background-color: #ef7d03;
+  border-color: #ef7d03;
+}
+
+.btn.btn-success, .show > .btn.btn-success {
+  background-color: #89af3f;
+  border-color: #89af3f;
+}
+
+.btn.btn-primary, .show > .btn.btn-primary {
+  background-color: #12719a;
+  border-color: #12719a;
+}
+
+.cat__core__scroll-top {
+  display: none;
+}
+
+.card-block .filter-block {
+  margin: 0 auto 40px;
+  width: 80%;
+  .form-input-icon {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+}
+
+.cat__footer {
+  margin-bottom: 0;
+  background: #f8fcfe;
+  border-radius: 0;
+  padding: 10px 20px;
+  img {
+    display: none;
+  }
+}
+
+.cat__footer__bottom {
+  margin-top: 0; 
+  padding-top: 0; 
+  border-top: 0; 
+}
+
+.cat__breakline__top {
+  margin-top: 20px;
+}
+
+p span 
+{
+  display: block ;
+  .desktop-hidden-1200 {
+    display: block 
+  }
+  .desktop-hidden-1000 {
+    display: block 
+  }
+  .desktop-hidden-900 {
+    display: block 
+  }
+  .desktop-hidden-800 {
+    display: block 
+  }
+  .desktop-hidden-700 {
+    display: block 
+  }
+  .desktop-hidden-600 {
+    display: block 
+  }
+  .desktop-hidden-500 {
+    display: block 
+  }
+  .desktop-hidden-400 {
+    display: block 
+  }
+}
+
+// Styles for Avanved Buttons in claims.
+.icon {
+  width : 15px;
+}
+.btnA:hover, .btnB:focus, .btnB:active, .btnB btn { 
+  color: #fff !important;
+  background-color: #449d44 !important;
+  border-color: #285e8e !important;
+}
+
+// Checkbox styles.
+.checkbox {
+padding-left: 20px; }
+.checkbox label {
+  display: inline-block;
+  position: relative;
+padding-left: 5px; }
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #fb434a;
+  border-radius: 3px;
+  border-width: 2px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+color: #555555; }
+.checkbox input[type="checkbox"] {
+opacity: 0; }
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+outline-offset: -2px; }
+.checkbox input[type="checkbox"]:checked + label::after {
+  font-family: 'FontAwesome';
+content: "\f00c"; }
+.checkbox input[type="checkbox"]:disabled + label {
+opacity: 0.65; }
+.checkbox input[type="checkbox"]:disabled + label::before {
+  background-color: #eeeeee;
+cursor: not-allowed; }
+.checkbox.checkbox-circle label::before {
+border-radius: 50%; }
+.checkbox.checkbox-inline {
+margin-top: 0; }
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+  background-color: #428bca;
+border-color: #428bca; }
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+color: #fff; }
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+border-color: #d9534f; }
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+color: #fff; }
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+border-color: #5bc0de; }
+.checkbox-info input[type="checkbox"]:checked + label::after {
+color: #fff; }
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+border-color: #f0ad4e; }
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+color: #fff; }
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+border-color: #5cb85c; }
+.checkbox-success input[type="checkbox"]:checked + label::after {
+color: #fff; }
+
+/* Resize Modal*/
+.resize-modal{  max-height: calc(100vh - 210px); overflow-y: auto;} 
+
+/* Responsive ngx-datatable */
+@media screen and (max-width: 1200px) {
+  .desktop-hidden-1200 {
+    display: initial;
+  }
+  .mobile-hidden-1200 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .desktop-hidden-1200 {
+    display: none;
+  }
+  .mobile-hidden-1200 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .desktop-hidden-1000 {
+    display: initial;
+  }
+  .mobile-hidden-1000 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .desktop-hidden-1000 {
+    display: none;
+  }
+  .mobile-hidden-1000 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 900px) {
+  .desktop-hidden-900 {
+    display: initial;
+  }
+  .mobile-hidden-900 {
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .desktop-hidden-900 {
+    display: none;
+  }
+  .mobile-hidden-900 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 800px) {
+  .desktop-hidden-800 {
+    display: initial;
+  }
+  .mobile-hidden-800 {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktop-hidden-800 {
+    display: none;
+  }
+  .mobile-hidden-800 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 700px) {
+  .desktop-hidden-700 {
+    display: initial;
+  }
+  .mobile-hidden-700 {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .desktop-hidden-700 {
+    display: none;
+  }
+  .mobile-hidden-700 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 600px) {
+  .desktop-hidden-600 {
+    display: initial;
+  }
+  .mobile-hidden-600 {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .desktop-hidden-600 {
+    display: none;
+  }
+  .mobile-hidden-600 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 500px) {
+  .desktop-hidden-500 {
+    display: initial;
+  }
+  .mobile-hidden-500 {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .desktop-hidden-500 {
+    display: none;
+  }
+  .mobile-hidden-500 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 400px) {
+  .desktop-hidden-400 {
+    display: initial;
+  }
+  .mobile-hidden-400 {
+    display: none;
+  }
+}
+@media screen and (min-width: 400px) {
+  .desktop-hidden-400 {
+    display: none;
+  }
+  .mobile-hidden-400 {
+    display: initial;
+  }
+}
+
+/* Responsive ngx-datatable */
+.icon {
+  width: 15px; 
+}
+
+.hidden-close-cell {
+  width: 0px !important
+}
+
+/* Styles from Claim */
+.btn .btn-rounded-problem-detail {
+  width: 25% !important
+}
+
+/* Styles from icons and labels */
+.icon-padding-right {
+  padding-right: 7px;
+}
+
+/* Text align  */
+.right{text-align:right;}
+.left{text-align:left;}
+.text-center {
+  text-align: center;
+}
+.my-drop-zone { border: dotted 3px lightgray; }
+.nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+.another-file-over-class { border: dotted 3px green; }
+
+/* show images upload */
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-holder {
+  padding: 2px; /*for white border around images*/
+  height: 120px;
+}
+
+.image-holder-min {
+  padding: 2px; /*for white border around images*/
+  height: 40px;
+}
+
+/* .image-holder img {
+  height: 100%;
+} */
+
+/* Close button image */
+.img-wrap {
+  position: relative;
+  font-size: 0;
+}
+.img-wrap .close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+  background-color: #FFF;
+  padding: 5px 2px 2px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: .2;
+  text-align: center;
+  font-size: 22px;
+  line-height: 10px;
+  border-radius: 50%;
+}
+.img-wrap:hover .close {
+  opacity: 1;
+}
+
+/* disabled widnow while is loading */
+.disabledwindow {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* active step button */
+.background-step-active {
+  background-color: green;
+}
+.displayBlock {
+  display: block;
+}
+.imgReport {
+  width: 30% !important;
+}
+.line {
+  margin: 0;
+  background-color: black;
+  height: 1px;
+}
+.line2 {
+  margin: 0;
+  background-color: lightblue;
+  height: 8px;
+  border: antiquewhite;
+}
+.backGroundGray { 
+  margin: 0 !important;
+  padding:10px;
+  background-color: lightgray;  
+}
+.backGroundGreen { 
+  padding:8px;
+  background-color: darkseagreen;  
+}
+.blockcenter {
+  margin: 0 10% 0 10%; 
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+.colorTitle {
+  color: dodgerblue;
+}
+.colorRed {
+  color: red;
+}  
+.marginHeader {
+  margin: 100px 10px 20px 10px;
+}
+.fontSmall {
+  font-size: smaller;
+}

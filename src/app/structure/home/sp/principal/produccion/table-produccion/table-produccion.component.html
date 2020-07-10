@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col-md-12 col-lg-12 card-search">
+
+        <div class="form-input-icon form-input-icon-right">
+            <i class="icmn-search"></i>
+            <input type="text" id="search-receta" class="form-control" placeholder="Buscar Receta por Nombre" (keyup)='onKeyUp($event)'>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col-lg-12">
+        <div>
+            <ngx-datatable #table class='material expandable' [rows]="temp_produccion" [columnMode]="'force'"
+                [headerHeight]="50" [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [rowHeight]="50"
+                [limit]="10" [sorts]="[{prop: 'idReceta', dir: 'desc'}]"
+                [messages]="{emptyMessage: 'Cargando Recetas',  totalMessage: 'Total'}">
+
+                <ngx-datatable-column name="ID" [sortable]="true" [prop]="'idProduccion'"
+                    [flexGrow]="1" [width]="50">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Receta" [sortable]="true" [prop]="'receta.nombreReceta'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Tipo Receta" [sortable]="true" [prop]="'receta.tipReceta'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Descripcion Receta" [sortable]="true" [prop]="'receta.desReceta'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Cantidad" [sortable]="true" [prop]="'cantProduccion'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                
+                <ngx-datatable-column name="Fecha" [sortable]="true" [prop]="'fecha'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Peso" [sortable]="true" [prop]="'peso'" [flexGrow]="1" [width]="250">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Insumo" [sortable]="true" [prop]="'nombreInsumo'" [flexGrow]="1" [width]="250">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Usuario" [sortable]="true" [prop]="'user.username'" [flexGrow]="1" [width]="250">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+            </ngx-datatable>
+        </div>
+    </div>
+    
+</div>

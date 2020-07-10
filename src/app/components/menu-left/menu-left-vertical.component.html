@@ -1,0 +1,55 @@
+<nav class="cat__menu-left">
+    <div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
+        <div class="cat__menu-left__pin-button">
+            <div><!-- --></div>
+        </div>
+    </div>
+    <div class="cat__menu-left__logo text-white text-center">
+        <a [routerLink]="['/']">
+            <img src="" />
+        </a>
+        <strong>{{username}}</strong>
+    </div>
+    <div class="cat__menu-left__inner">
+        <ul class="cat__menu-left__list cat__menu-left__list--root">
+              
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a href="javascript: void(0);">
+                    <span class="cat__menu-left__icon fa fa-wpforms"></span>
+                    Principal
+                </a>
+                <ul class="cat__menu-left__list">
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['sp/principal/receta']">
+                            <span class="cat__menu-left__icon">R</span>
+                            Receta
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['sp/principal/insumos']">
+                            <span class="cat__menu-left__icon">I</span>
+                            Insumos
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['sp/principal/produccion']">
+                            <span class="cat__menu-left__icon">P</span>
+                            Produccion
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+
+            <li class="cat__menu-left__divider"><!-- --></li>
+            <li class="cat__menu-left__item">
+                <a href="javascript: void(0);" (click)="logout()">
+                    <!-- <span class="cat__core__donut cat__core__donut--danger"></span> -->
+                    <i class="dropdown-icon icmn-exit"></i>
+                    Salir
+                </a>
+               
+            </li>
+        </ul>
+    </div>
+</nav>

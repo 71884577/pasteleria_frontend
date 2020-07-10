@@ -1,0 +1,11 @@
+<form #form="ngForm" [formGroup]="form_insumos_register">
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label class="form-label" for="attr_nombreInsumos"><H5>Nombre</H5></label>
+            <input type="text" class="form-control" style="background-color: #f8e7fd;" id="attr_nombreInsumos" formControlName="nombreInsumos">
+        </div>
+        <div class="form-actions col-md-12">
+            <button type="button" class="btn btn-success btn-lg btn-block" [disabled]="!form_insumos_register.valid" (click)="onSubmit(form_insumos_register.value,form_insumos_register.valid)">Registrar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+<div class="row" [formGroup]="form_insumo">
+    <div class="form-group col-lg-3">
+        <!-- <input type="text" class="form-control" placeholder="Nombre Insumo" formControlName="nombreInsumo"/> -->
+        <select id="{{id_insumos}}" class="select2 form-control"> <!-- id_areas -->
+            <option disabled>-- {{'Insumo'}} --</option>
+        </select>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="text" class="form-control" placeholder="Categoria" formControlName="catInsumo"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="number" class="form-control" placeholder="Cantidad" formControlName="cantInsumo"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="text" class="form-control" placeholder="Unidad de Medida" formControlName="umInsumo"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="text" class="form-control" placeholder="Marca" formControlName="marcInsumo"/>
+    </div>
+    <div class="form-group col-lg-3">
+        <input type="text" class="form-control" placeholder="Fecha Vencimiento" formControlName="fvInsumo"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="number" class="form-control" placeholder="Precio" formControlName="precInsumo"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="number" class="form-control" placeholder="Stock" formControlName="stock"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="text" class="form-control" placeholder="Stock Promedio" formControlName="stockPromedio"/>
+    </div>
+    <div class="form-group col-lg-2">
+        <input type="text" class="form-control" placeholder="Stock Minimo" formControlName="stockMinimo"/>
+    </div>
+    
+    <div class="form-group col-lg-12">
+        <input type="text" class="form-control" placeholder="Descripcion" formControlName="desInsumo"/>
+    </div>
+
+</div>

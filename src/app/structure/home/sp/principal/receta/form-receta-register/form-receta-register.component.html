@@ -1,0 +1,40 @@
+<form #form="ngForm" [formGroup]="form_receta_register">
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label class="form-label" for="attr_nombreReceta"><H5>Nombre</H5></label>
+            <input type="text" class="form-control" style="background-color: #f8e7fd;" id="attr_nombreReceta" formControlName="nombreReceta">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label" for="attr_tipReceta"><H5>Tipo</H5></label>
+            <input type="text" step="1" class="form-control" style="background-color: #f8e7fd;" id="attr_tipReceta" formControlName="tipReceta">
+        </div>
+        <div class="form-group col-md-5">
+            <label class="form-label" for="attr_desReceta"><H5>Descripcion</H5></label>
+            <input type="text" step="1" class="form-control" style="background-color: #f8e7fd;" id="attr_desReceta" formControlName="desReceta">
+        </div>
+       
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-2">
+            <label class="form-label"><H5></H5></label>
+            <button class="btn btn-success btn-block" (click)="agregarInsumo()"><i class="icmn-plus"> Insumo</i></button>
+        </div>       
+    </div>
+    <div class="row col-lg-12">
+        <div formArrayName="insumos" *ngFor="let item of form_receta_register.get('insumos')['controls']; let i = index;">
+            <div [formGroupName]="i">
+                <div  class="row">
+                    <div class="form-group col-lg-12">
+                        <label><strong>INSUMO {{i+1}}</strong></label>
+                    </div>
+                </div>
+                
+                <form-insumo-register [insumos]="insumos" [form_insumo]="form_receta_register.get('insumos')['controls'][i]"></form-insumo-register>
+            </div>
+        </div>
+
+        <div class="form-actions col-md-12">
+            <button type="button" class="btn btn-success btn-lg btn-block" [disabled]="!form_receta_register.valid" (click)="onSubmit(form_receta_register.value,form_receta_register.valid)">Registrar</button>
+        </div>
+    </div>
+</form>

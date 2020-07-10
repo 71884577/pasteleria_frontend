@@ -1,0 +1,55 @@
+<section class="card">
+    <div class="card-header">
+        <h3 class="text-black"><strong>Recetas</strong></h3>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-lg-12">               
+                <app-form-receta-register 
+                    [insumos] = "api_insumos"
+                    (receta)="onRegister($event)"
+                >
+                </app-form-receta-register>
+            </div>
+            
+        </div>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <app-table-receta
+                    [recetas] = "api_recetas"
+                    (update) = "onUpdate($event)"
+                    (delete) = "onDelete($event)"
+                >
+                </app-table-receta>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div class="modal fade modal-size-large" id="modalEdit" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Editar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="col-lg-12">
+                    <app-form-receta-update
+                    [insumos] = "api_insumos"
+                    [receta] = "receta_update"
+                    (receta2) = "onUpdate2($event)"
+                    ></app-form-receta-update>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
