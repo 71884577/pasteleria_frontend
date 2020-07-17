@@ -1,0 +1,21 @@
+<form #form="ngForm" [formGroup]="form_stock_register">
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label class="form-label" for="attr_nombreInsumos"><H5>Insumo</H5></label>
+            <select id="id_insumo" class="select2 form-control">
+                <option disabled>-- {{'Insumo'}} --</option>
+            </select>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="form-label" for="attr_ingresoInsumos"><H5>Ingreso</H5></label>
+            <input type="number" class="form-control" style="background-color: #f8e7fd;" id="attr_ingresoInsumos" formControlName="ingresoInsumos">
+        </div>
+        <div class="form-group col-md-12">
+            <label class="form-label" for="attr_salidaInsumos"><H5>Salida</H5></label>
+            <input type="number" class="form-control" style="background-color: #f8e7fd;" id="attr_salidaInsumos" formControlName="salidaInsumos">
+        </div>
+        <div class="form-actions col-md-12">
+            <button type="button" class="btn btn-success btn-lg btn-block" [disabled]="!form_stock_register.valid" (click)="onSubmit(form_stock_register.value,form_stock_register.valid)">Registrar</button>
+        </div>
+    </div>
+</form>

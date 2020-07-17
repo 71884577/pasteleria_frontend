@@ -1,0 +1,42 @@
+<section class="card">
+    <div class="card-header">
+        <h3 class="text-black"><strong>Reporte Stock</strong></h3>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-lg-3">               
+            </div>
+            <div class="col-lg-6">
+                <app-table-stock-reporte
+                    [stock_reporte] = "api_stock_reporte"
+                >
+                </app-table-stock-reporte>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="text-black"><strong>Stock</strong></h3>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-lg-4">               
+                <app-form-stock-register 
+                    [insumos] = "api_insumos"
+                    (stock)="onRegister($event)"
+                >
+                </app-form-stock-register>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-7">
+                <app-table-stock
+                    [stock] = "api_stock"
+                >
+                </app-table-stock>
+            </div>
+        </div>
+    </div>
+</section>

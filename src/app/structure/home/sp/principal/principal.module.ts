@@ -20,6 +20,11 @@ import { InsumosComponent } from './insumos/insumos.component';
 import { TableInsumosComponent } from './insumos/table-insumos/table-insumos.component';
 import { FormInsumosRegisterComponent } from './insumos/form-insumos-register/form-insumos-register.component';
 import { FormInsumosUpdateComponent } from './insumos/form-insumos-update/form-insumos-update.component';
+import { StockService } from '../services/stock.service';
+import { StockComponent } from './stock/stock.component';
+import { FormStockRegisterComponent } from './stock/form-stock-register/form-stock-register.component';
+import { TableStockComponent } from './stock/table-stock/table-stock.component';
+import { TableStockReporteComponent } from './stock/table-stock-reporte/table-stock-reporte.component';
 
 
 @NgModule({
@@ -45,14 +50,19 @@ import { FormInsumosUpdateComponent } from './insumos/form-insumos-update/form-i
         FormInsumosRegisterComponent,
         FormInsumosUpdateComponent,
         TableInsumosComponent,
-        FormInsumoUpdateComponent
+        FormInsumoUpdateComponent,
+        StockComponent,
+        FormStockRegisterComponent,
+        TableStockComponent,
+        TableStockReporteComponent
 
     ],
     providers: [
         DatePipe,
         RecetaService,
         ProduccionService,
-        InsumosService
+        InsumosService,
+        StockService
     ]
 })
 

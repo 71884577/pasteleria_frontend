@@ -27,6 +27,33 @@
                     </ng-template>
                 </ngx-datatable-column>
 
+                <ngx-datatable-column name="Insumo" [sortable]="true" [prop]="'nombreInsumo'" [flexGrow]="1" [width]="250">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Peso" [sortable]="true" [prop]="'peso'" [flexGrow]="1" [width]="250">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Cantidad" [sortable]="true" [prop]="'cantProduccion'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
                 <ngx-datatable-column name="Receta" [sortable]="true" [prop]="'receta.nombreReceta'" [flexGrow]="1" [width]="200">
                     <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
                         <span (click)="sort()">{{column.name}}</span>
@@ -53,35 +80,8 @@
                         <span> {{value}} </span>
                     </ng-template>
                 </ngx-datatable-column>
-
-                <ngx-datatable-column name="Cantidad" [sortable]="true" [prop]="'cantProduccion'" [flexGrow]="1" [width]="200">
-                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
-                        <span (click)="sort()">{{column.name}}</span>
-                    </ng-template>
-                    <ng-template let-value="value" ngx-datatable-cell-template>
-                        <span> {{value}} </span>
-                    </ng-template>
-                </ngx-datatable-column>
                 
                 <ngx-datatable-column name="Fecha" [sortable]="true" [prop]="'fecha'" [flexGrow]="1" [width]="200">
-                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
-                        <span (click)="sort()">{{column.name}}</span>
-                    </ng-template>
-                    <ng-template let-value="value" ngx-datatable-cell-template>
-                        <span> {{value}} </span>
-                    </ng-template>
-                </ngx-datatable-column>
-
-                <ngx-datatable-column name="Peso" [sortable]="true" [prop]="'peso'" [flexGrow]="1" [width]="250">
-                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
-                        <span (click)="sort()">{{column.name}}</span>
-                    </ng-template>
-                    <ng-template let-value="value" ngx-datatable-cell-template>
-                        <span> {{value}} </span>
-                    </ng-template>
-                </ngx-datatable-column>
-
-                <ngx-datatable-column name="Insumo" [sortable]="true" [prop]="'nombreInsumo'" [flexGrow]="1" [width]="250">
                     <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
                         <span (click)="sort()">{{column.name}}</span>
                     </ng-template>

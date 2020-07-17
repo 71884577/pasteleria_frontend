@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12 col-lg-12 card-search">
+
+        <div class="form-input-icon form-input-icon-right">
+            <i class="icmn-search"></i>
+            <input type="text" id="search-insumos" class="form-control" placeholder="Buscar Insumo por Nombre" (keyup)='onKeyUp($event)'>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col-lg-12">
+        <div>
+            <ngx-datatable #table class='material expandable' [rows]="temp_stock" [columnMode]="'force'"
+                [headerHeight]="50" [footerHeight]="50" [scrollbarV]="false" [scrollbarH]="true" [rowHeight]="50"
+                [limit]="10" [sorts]="[{prop: 'idInsumos', dir: 'desc'}]"
+                [messages]="{emptyMessage: 'No se encontraron Registros',  totalMessage: 'Total'}">
+
+                <ngx-datatable-column name="ID" [sortable]="true" [prop]="'idStock'"
+                    [flexGrow]="1" [width]="50">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Nombre" [sortable]="true" [prop]="'nombreInsumos'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                
+                <ngx-datatable-column name="Ingreso" [sortable]="true" [prop]="'ingresoInsumos'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+
+                <ngx-datatable-column name="Salida" [sortable]="true" [prop]="'salidaInsumos'" [flexGrow]="1" [width]="200">
+                    <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+                        <span (click)="sort()">{{column.name}}</span>
+                    </ng-template>
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        <span> {{value}} </span>
+                    </ng-template>
+                </ngx-datatable-column>
+               
+            </ngx-datatable>
+        </div>
+    </div>
+    
+</div>

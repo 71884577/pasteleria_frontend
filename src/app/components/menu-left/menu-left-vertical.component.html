@@ -20,15 +20,15 @@
                 </a>
                 <ul class="cat__menu-left__list">
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['sp/principal/receta']">
-                            <span class="cat__menu-left__icon">R</span>
-                            Receta
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
                         <a [routerLink]="['sp/principal/insumos']">
                             <span class="cat__menu-left__icon">I</span>
                             Insumos
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['sp/principal/receta']">
+                            <span class="cat__menu-left__icon">R</span>
+                            Receta
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
@@ -37,7 +37,12 @@
                             Produccion
                         </a>
                     </li>
-                    
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['sp/principal/stock']">
+                            <span class="cat__menu-left__icon">S</span>
+                            Stock
+                        </a>
+                    </li>
                 </ul>
             </li>
 

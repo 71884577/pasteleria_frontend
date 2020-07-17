@@ -27,8 +27,10 @@ export class TableProduccionComponent implements OnInit, OnChanges{
 
         let val = e_keyup.target.value.toLowerCase();
 
-        this.temp_produccion = this.temp_produccion.filter(function(d:any){
+        this.temp_produccion = this.produccion.filter(function(d:any){
             if(d.nombreInsumo && d.nombreInsumo.toString().toLowerCase().indexOf(val) !== -1 || !val){
+                return true;
+            } else if(d.fecha && d.fecha.toString().toLowerCase().indexOf(val) !== -1 || !val){
                 return true;
             }
         });
